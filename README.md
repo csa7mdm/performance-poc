@@ -1,5 +1,7 @@
 # Performance POC: PostgreSQL vs RabbitMQ
 
+![License](https://img.shields.io/github/license/csa7mdm/performance-poc)
+
 This project is a Proof of Concept (POC) designed to benchmark and compare the performance of using **PostgreSQL** (as a queue via a table) versus **RabbitMQ** (a native message broker) for high-throughput producer-consumer workloads.
 
 ## 🎯 Purpose
