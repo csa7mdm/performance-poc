@@ -2,6 +2,7 @@
 
 ![License](https://img.shields.io/github/license/csa7mdm/performance-poc)
 [![.NET CI](https://github.com/csa7mdm/performance-poc/actions/workflows/ci.yml/badge.svg)](https://github.com/csa7mdm/performance-poc/actions/workflows/ci.yml)
+![AI Powered](https://img.shields.io/badge/AI-Gemini%203-blueviolet)
 
 This project is a Proof of Concept (POC) designed to benchmark and compare the performance of using **PostgreSQL** (as a queue via a table) versus **RabbitMQ** (a native message broker) for high-throughput producer-consumer workloads.
 
@@ -136,3 +137,23 @@ gantt
 - **Performance Cost**: Heavy overhead due to locking (`SKIP LOCKED`) and transaction logs (WAL).
 
 **Verdict**: Use **RabbitMQ** for any workload requiring high throughput or low latency. Use **PostgreSQL** only for low-volume, transactional internal jobs.
+
+---
+
+## 🤖 Built with Next-Gen AI
+
+> "**The future of coding is agentic.**"
+
+This project was architected, implemented, and benchmarked using **Google DeepMind's Antigravity IDE**, powered by the **Gemini 3** model.
+
+![Gemini](https://img.shields.io/badge/Google%20DeepMind-Gemini%203-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)
+![Antigravity](https://img.shields.io/badge/IDE-Antigravity-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+
+### Technology Showcase
+This repository serves as a demonstration of **Agentic AI capabilities** in software engineering:
+*   **Autonomous Architecture**: From `docker-compose` topology to .NET solution structure.
+*   **Self-Correction**: Automatically debugging CI/CD pipeline failures and resolving obscure .NET 9 nullability warnings.
+*   **Performance Engineering**: Designing and executing `BenchmarkDotNet` suites to validate hypotheses.
+
+_Created by [Your Name/Username] with the assistance of Antigravity._
+
