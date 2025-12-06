@@ -38,7 +38,10 @@ namespace PerformancePoc.Mq
                 int retryCount = 0;
                 if (ea.BasicProperties.Headers != null && ea.BasicProperties.Headers.ContainsKey("x-retry-count"))
                 {
-                    retryCount = (int)ea.BasicProperties.Headers["x-retry-count"];
+                    if (ea.BasicProperties.Headers["x-retry-count"] is int count)
+                    {
+                        retryCount = count;
+                    }
                 }
 
                 try

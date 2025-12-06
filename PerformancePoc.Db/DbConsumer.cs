@@ -20,7 +20,7 @@ namespace PerformancePoc.Db
         private class MessageRow
         {
             public Guid Id { get; set; }
-            public string Payload { get; set; }
+            public string? Payload { get; set; }
             public int RetryCount { get; set; }
         }
 
@@ -48,7 +48,10 @@ namespace PerformancePoc.Db
 
                 try
                 {
-                    await ProcessMessageAsync(message.Payload, _simulateFailure);
+                    if (message.Payload != null)
+                    {
+                        await ProcessMessageAsync(message.Payload, _simulateFailure);
+                    }
                     
                     // Success: Delete
                     await connection.ExecuteAsync(

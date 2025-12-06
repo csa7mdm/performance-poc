@@ -13,9 +13,9 @@ namespace PerformancePoc.Benchmarks
         private const string DbConnectionString = "Host=localhost;Port=5432;Database=performance_poc;Username=admin;Password=password";
         private const string MqHostName = "localhost";
 
-        private DbProducer _dbProducer;
-        private MqProducer _mqProducer;
-        private MessagePayload _payload;
+        private DbProducer _dbProducer = null!;
+        private MqProducer _mqProducer = null!;
+        private MessagePayload _payload = null!;
 
         [Params(100)] // Number of messages
         public int N;

@@ -4,10 +4,10 @@ namespace PerformancePoc.Common
 {
     public class MessagePayload
     {
-        public Guid Id { get; set; }
-        public string Content { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public byte[] Data { get; set; } // To simulate payload size
+        public required Guid Id { get; set; }
+        public required string Content { get; set; }
+        public required DateTime CreatedAt { get; set; }
+        public required byte[] Data { get; set; } // To simulate payload size
 
         public static MessagePayload Create(int sizeInBytes)
         {
