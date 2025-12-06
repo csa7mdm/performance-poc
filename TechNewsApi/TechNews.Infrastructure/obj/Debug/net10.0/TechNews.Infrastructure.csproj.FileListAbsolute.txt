@@ -1,0 +1,15 @@
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/bin/Debug/net10.0/TechNews.Infrastructure.deps.json
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/bin/Debug/net10.0/TechNews.Infrastructure.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/bin/Debug/net10.0/TechNews.Infrastructure.pdb
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/bin/Debug/net10.0/TechNews.Core.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/bin/Debug/net10.0/TechNews.Core.pdb
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/TechNews.Infrastructure.csproj.AssemblyReference.cache
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/TechNews.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/TechNews.Infrastructure.AssemblyInfoInputs.cache
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/TechNews.Infrastructure.AssemblyInfo.cs
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/TechNews.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/TechNews.919422FC.Up2Date
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/TechNews.Infrastructure.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/refint/TechNews.Infrastructure.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/TechNews.Infrastructure.pdb
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Infrastructure/obj/Debug/net10.0/ref/TechNews.Infrastructure.dll

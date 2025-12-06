@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="TechNews.Core/TechNews.Core.csproj" />
+  <Project Path="TechNews.Infrastructure/TechNews.Infrastructure.csproj" />
+  <Project Path="TechNews.Tests/TechNews.Tests.csproj" />
+  <Project Path="TechNews.Web/TechNews.Web.csproj" />
+</Solution>

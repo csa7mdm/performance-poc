@@ -1,0 +1,313 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 4 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/" /p:OutDir="/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0/" /p:OutputPath="/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0/" /p:PublishDir="/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/publish/" in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1
+// command took 1.88 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/" /p:OutDir="/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0/" /p:OutputPath="/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0/" /p:PublishDir="/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/publish/" --output "/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0/" in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1
+// command took 4.81 sec and exited with 0
+// ***** Done, took 00:00:06 (6.73 sec)   *****
+// Found 4 benchmarks:
+//   PerformanceBenchmarks.Db_Produce_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+//   PerformanceBenchmarks.Mq_Produce_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+//   PerformanceBenchmarks.Db_Consume_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+//   PerformanceBenchmarks.Mq_Consume_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+
+// **************************
+// Benchmark: PerformanceBenchmarks.Db_Produce_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet PerformancePoc.Benchmarks-Job-TABGLQ-1.dll --anonymousPipes 131 132 --benchmarkName "PerformancePoc.Benchmarks.PerformanceBenchmarks.Db_Produce_Seq(N: 100, PayloadSize: 1024)" --job "IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1" --benchmarkId 0 in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1)
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "tmpmessages_pkey"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at PerformancePoc.Db.DbProducer.PublishAsync(MessagePayload message) in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Db/DbProducer.cs:line 23
+   at PerformancePoc.Benchmarks.PerformanceBenchmarks.Db_Produce_Seq() in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/PerformanceBenchmarks.cs:line 51
+   at BenchmarkDotNet.Helpers.AwaitHelper.GetResult(Task task)
+   at BenchmarkDotNet.Autogenerated.Runnable_0.<.ctor>b__3_3() in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/PerformancePoc.Benchmarks-Job-TABGLQ-1.notcs:line 200
+   at BenchmarkDotNet.Autogenerated.Runnable_0.WorkloadActionUnroll(Int64 invokeCount) in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/PerformancePoc.Benchmarks-Job-TABGLQ-1.notcs:line 274
+   at BenchmarkDotNet.Engines.Engine.Measure(Action`1 action, Int64 invokeCount)
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_0.Run(IHost host, String benchmarkName) in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/PerformancePoc.Benchmarks-Job-TABGLQ-1.notcs:line 181
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "tmpmessages_pkey"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: tmpmessages
+    ConstraintName: tmpmessages_pkey
+    File: nbtinsert.c
+    Line: 666
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/PerformancePoc.Benchmarks-Job-TABGLQ-1.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 23485 has exited with code 255.
+
+// ** Remained 3 (75.0%) benchmark(s) to run. Estimated finish 2025-12-06 3:02 (0h 0m from now) **
+// **************************
+// Benchmark: PerformanceBenchmarks.Mq_Produce_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet PerformancePoc.Benchmarks-Job-TABGLQ-1.dll --anonymousPipes 131 132 --benchmarkName "PerformancePoc.Benchmarks.PerformanceBenchmarks.Mq_Produce_Seq(N: 100, PayloadSize: 1024)" --job "IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1" --benchmarkId 1 in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1)
+
+WorkloadWarmup   1: 1 op, 12886375.00 ns, 12.8864 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 197875.00 ns, 197.8750 us/op
+WorkloadActual   2: 1 op, 187250.00 ns, 187.2500 us/op
+WorkloadActual   3: 1 op, 241708.00 ns, 241.7080 us/op
+WorkloadActual   4: 1 op, 192000.00 ns, 192.0000 us/op
+WorkloadActual   5: 1 op, 1207375.00 ns, 1.2074 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 197875.00 ns, 197.8750 us/op
+WorkloadResult   2: 1 op, 187250.00 ns, 187.2500 us/op
+WorkloadResult   3: 1 op, 241708.00 ns, 241.7080 us/op
+WorkloadResult   4: 1 op, 192000.00 ns, 192.0000 us/op
+WorkloadResult   5: 1 op, 1207375.00 ns, 1.2074 ms/op
+// GC:  0 0 0 465600 1
+// Threading:  4 0 1
+
+// AfterAll
+// Benchmark Process 23489 has exited with code 0.
+
+Mean = 405.242 μs, StdErr = 200.768 μs (49.54%), N = 5, StdDev = 448.931 μs
+Min = 187.250 μs, Q1 = 192.000 μs, Median = 197.875 μs, Q3 = 241.708 μs, Max = 1,207.375 μs
+IQR = 49.708 μs, LowerFence = 117.438 μs, UpperFence = 316.270 μs
+ConfidenceInterval = [-1,323.430 μs; 2,133.913 μs] (CI 99.9%), Margin = 1,728.672 μs (426.58% of Mean)
+Skewness = 1.07, Kurtosis = 2.07, MValue = 2
+
+// ** Remained 2 (50.0%) benchmark(s) to run. Estimated finish 2025-12-06 3:02 (0h 0m from now) **
+// **************************
+// Benchmark: PerformanceBenchmarks.Db_Consume_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet PerformancePoc.Benchmarks-Job-TABGLQ-1.dll --anonymousPipes 131 132 --benchmarkName "PerformancePoc.Benchmarks.PerformanceBenchmarks.Db_Consume_Seq(N: 100, PayloadSize: 1024)" --job "IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1" --benchmarkId 2 in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1)
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "tmpmessages_pkey"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at PerformancePoc.Db.DbProducer.PublishAsync(MessagePayload message) in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Db/DbProducer.cs:line 23
+   at PerformancePoc.Benchmarks.PerformanceBenchmarks.Db_Consume_Seq() in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/PerformanceBenchmarks.cs:line 68
+   at BenchmarkDotNet.Helpers.AwaitHelper.GetResult(Task task)
+   at BenchmarkDotNet.Autogenerated.Runnable_2.<.ctor>b__3_3() in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/PerformancePoc.Benchmarks-Job-TABGLQ-1.notcs:line 530
+   at BenchmarkDotNet.Autogenerated.Runnable_2.WorkloadActionUnroll(Int64 invokeCount) in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/PerformancePoc.Benchmarks-Job-TABGLQ-1.notcs:line 604
+   at BenchmarkDotNet.Engines.Engine.Measure(Action`1 action, Int64 invokeCount)
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_2.Run(IHost host, String benchmarkName) in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/PerformancePoc.Benchmarks-Job-TABGLQ-1.notcs:line 511
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "tmpmessages_pkey"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: tmpmessages
+    ConstraintName: tmpmessages_pkey
+    File: nbtinsert.c
+    Line: 666
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/PerformancePoc.Benchmarks-Job-TABGLQ-1.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 23490 has exited with code 255.
+
+// ** Remained 1 (25.0%) benchmark(s) to run. Estimated finish 2025-12-06 3:02 (0h 0m from now) **
+// **************************
+// Benchmark: PerformanceBenchmarks.Mq_Consume_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet PerformancePoc.Benchmarks-Job-TABGLQ-1.dll --anonymousPipes 131 132 --benchmarkName "PerformancePoc.Benchmarks.PerformanceBenchmarks.Mq_Consume_Seq(N: 100, PayloadSize: 1024)" --job "IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1" --benchmarkId 3 in /Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Benchmarks/bin/Release/net9.0/PerformancePoc.Benchmarks-Job-TABGLQ-1/bin/Release/net9.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1)
+
+WorkloadWarmup   1: 1 op, 42515375.00 ns, 42.5154 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 13831917.00 ns, 13.8319 ms/op
+WorkloadActual   2: 1 op, 9837375.00 ns, 9.8374 ms/op
+WorkloadActual   3: 1 op, 9248333.00 ns, 9.2483 ms/op
+WorkloadActual   4: 1 op, 12444334.00 ns, 12.4443 ms/op
+WorkloadActual   5: 1 op, 10044625.00 ns, 10.0446 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 13831917.00 ns, 13.8319 ms/op
+WorkloadResult   2: 1 op, 9837375.00 ns, 9.8374 ms/op
+WorkloadResult   3: 1 op, 9248333.00 ns, 9.2483 ms/op
+WorkloadResult   4: 1 op, 12444334.00 ns, 12.4443 ms/op
+WorkloadResult   5: 1 op, 10044625.00 ns, 10.0446 ms/op
+// GC:  0 0 0 1032352 1
+// Threading:  97 0 1
+// Exceptions:  1
+
+// AfterAll
+// Benchmark Process 23491 has exited with code 0.
+
+Mean = 11.081 ms, StdErr = 0.878 ms (7.92%), N = 5, StdDev = 1.962 ms
+Min = 9.248 ms, Q1 = 9.837 ms, Median = 10.045 ms, Q3 = 12.444 ms, Max = 13.832 ms
+IQR = 2.607 ms, LowerFence = 5.927 ms, UpperFence = 16.355 ms
+ConfidenceInterval = [3.524 ms; 18.638 ms] (CI 99.9%), Margin = 7.557 ms (68.19% of Mean)
+Skewness = 0.37, Kurtosis = 1.02, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2025-12-06 3:02 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/PerformancePoc.Benchmarks.PerformanceBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/PerformancePoc.Benchmarks.PerformanceBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/PerformancePoc.Benchmarks.PerformanceBenchmarks-report.html
+
+// * Detailed results *
+PerformanceBenchmarks.Db_Produce_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+Runtime = .NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+There are not any results runs
+
+PerformanceBenchmarks.Mq_Produce_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+Runtime = .NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 405.242 μs, StdErr = 200.768 μs (49.54%), N = 5, StdDev = 448.931 μs
+Min = 187.250 μs, Q1 = 192.000 μs, Median = 197.875 μs, Q3 = 241.708 μs, Max = 1,207.375 μs
+IQR = 49.708 μs, LowerFence = 117.438 μs, UpperFence = 316.270 μs
+ConfidenceInterval = [-1,323.430 μs; 2,133.913 μs] (CI 99.9%), Margin = 1,728.672 μs (426.58% of Mean)
+Skewness = 1.07, Kurtosis = 2.07, MValue = 2
+-------------------- Histogram --------------------
+[187.250 μs ;   559.058 μs) | @@@@
+[559.058 μs ;   862.796 μs) | 
+[862.796 μs ; 1,551.954 μs) | @
+---------------------------------------------------
+
+PerformanceBenchmarks.Db_Consume_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+Runtime = .NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+There are not any results runs
+
+PerformanceBenchmarks.Mq_Consume_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+Runtime = .NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 11.081 ms, StdErr = 0.878 ms (7.92%), N = 5, StdDev = 1.962 ms
+Min = 9.248 ms, Q1 = 9.837 ms, Median = 10.045 ms, Q3 = 12.444 ms, Max = 13.832 ms
+IQR = 2.607 ms, LowerFence = 5.927 ms, UpperFence = 16.355 ms
+ConfidenceInterval = [3.524 ms; 18.638 ms] (CI 99.9%), Margin = 7.557 ms (68.19% of Mean)
+Skewness = 0.37, Kurtosis = 1.02, MValue = 2
+-------------------- Histogram --------------------
+[ 8.140 ms ; 11.632 ms) | @@@
+[11.632 ms ; 14.644 ms) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, macOS Tahoe 26.1 (25B78) [Darwin 25.1.0]
+Apple M3 Pro, 1 CPU, 11 logical and 11 physical cores
+.NET SDK 9.0.109
+  [Host]     : .NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a
+  Job-TABGLQ : .NET 9.0.8 (9.0.8, 9.0.825.36511), Arm64 RyuJIT armv8.0-a
+
+IterationCount=5  LaunchCount=1  RunStrategy=Monitoring  
+WarmupCount=1  
+
+| Method         | N   | PayloadSize | Mean        | Error      | StdDev     | Median      | Allocated  |
+|--------------- |---- |------------ |------------:|-----------:|-----------:|------------:|-----------:|
+| Db_Produce_Seq | 100 | 1024        |          NA |         NA |         NA |          NA |         NA |
+| Mq_Produce_Seq | 100 | 1024        |    405.2 μs | 1,728.7 μs |   448.9 μs |    197.9 μs |  454.69 KB |
+| Db_Consume_Seq | 100 | 1024        |          NA |         NA |         NA |          NA |         NA |
+| Mq_Consume_Seq | 100 | 1024        | 11,081.3 μs | 7,556.9 μs | 1,962.5 μs | 10,044.6 μs | 1008.16 KB |
+
+Benchmarks with issues:
+  PerformanceBenchmarks.Db_Produce_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+  PerformanceBenchmarks.Db_Consume_Seq: Job-TABGLQ(IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1) [N=100, PayloadSize=1024]
+
+// * Warnings *
+MinIterationTime
+  PerformanceBenchmarks.Mq_Produce_Seq: IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1 -> The minimum observed iteration time is 187.25μs which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PerformanceBenchmarks.Mq_Consume_Seq: IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1 -> The minimum observed iteration time is 9.248ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Hints *
+Outliers
+  PerformanceBenchmarks.Mq_Produce_Seq: IterationCount=5, LaunchCount=1, RunStrategy=Monitoring, WarmupCount=1 -> 1 outlier  was  detected (1.21 ms)
+
+// * Legends *
+  N           : Value of the 'N' parameter
+  PayloadSize : Value of the 'PayloadSize' parameter
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  StdDev      : Standard deviation of all measurements
+  Median      : Value separating the higher half of all measurements (50th percentile)
+  Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 μs        : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:01 (1.29 sec), executed benchmarks: 4
+
+Global total time: 00:00:08 (8.24 sec), executed benchmarks: 4
+// * Artifacts cleanup *
+Artifacts cleanup is finished

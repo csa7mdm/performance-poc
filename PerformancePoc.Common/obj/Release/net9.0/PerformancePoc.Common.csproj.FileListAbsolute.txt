@@ -1,0 +1,11 @@
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/bin/Release/net9.0/PerformancePoc.Common.deps.json
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/bin/Release/net9.0/PerformancePoc.Common.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/bin/Release/net9.0/PerformancePoc.Common.pdb
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/obj/Release/net9.0/PerformancePoc.Common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/obj/Release/net9.0/PerformancePoc.Common.AssemblyInfoInputs.cache
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/obj/Release/net9.0/PerformancePoc.Common.AssemblyInfo.cs
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/obj/Release/net9.0/PerformancePoc.Common.csproj.CoreCompileInputs.cache
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/obj/Release/net9.0/PerformancePoc.Common.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/obj/Release/net9.0/refint/PerformancePoc.Common.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/obj/Release/net9.0/PerformancePoc.Common.pdb
+/Users/ahmedmustafa/.gemini/antigravity/scratch/PerformancePoc.Common/obj/Release/net9.0/ref/PerformancePoc.Common.dll

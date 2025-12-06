@@ -1,0 +1,11 @@
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/bin/Debug/net10.0/TechNews.Core.deps.json
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/bin/Debug/net10.0/TechNews.Core.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/bin/Debug/net10.0/TechNews.Core.pdb
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/obj/Debug/net10.0/TechNews.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/obj/Debug/net10.0/TechNews.Core.AssemblyInfoInputs.cache
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/obj/Debug/net10.0/TechNews.Core.AssemblyInfo.cs
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/obj/Debug/net10.0/TechNews.Core.csproj.CoreCompileInputs.cache
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/obj/Debug/net10.0/TechNews.Core.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/obj/Debug/net10.0/refint/TechNews.Core.dll
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/obj/Debug/net10.0/TechNews.Core.pdb
+/Users/ahmedmustafa/.gemini/antigravity/scratch/TechNewsApi/TechNews.Core/obj/Debug/net10.0/ref/TechNews.Core.dll
